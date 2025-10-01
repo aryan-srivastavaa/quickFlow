@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.animated-brand {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #0d6efd !important; 
+
+  opacity: 0;
+  transform: translateY(-20px);
+
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
