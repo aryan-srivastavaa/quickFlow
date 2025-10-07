@@ -1,6 +1,5 @@
-import { Navbar, Container, Button, Form } from "react-bootstrap";
+import { Navbar, Container, Form } from "react-bootstrap";
 import { useTheme } from "./components/context/ThemeContext";
-import Sidebar from "./components/Sidebar";
 import FlowBuilder from "./pages/FlowBuilder";
 import './App.css'
 function App() {
@@ -10,8 +9,14 @@ function App() {
     <div className={`app ${theme}`}>
       <Navbar style={{ height: '10vh' }} bg={theme === "dark" ? "dark" : "light"} variant={theme}>
         <Container>
-          <Navbar.Brand className="animated-brand">
-            QuickFlow
+          <Navbar.Brand  to="/" className="animated-brand d-flex align-items-center gap-2 cursor-pointer">
+            <img
+              src="/quickFlow-logo.png"
+              alt="QuickFlow"
+              height="28"
+              className="d-inline-block align-text-top rounded"
+            />
+            quickFlow
           </Navbar.Brand>
           <Form className="cursor-pointer">
             <Form.Check
